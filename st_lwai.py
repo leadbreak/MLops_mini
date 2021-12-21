@@ -441,7 +441,7 @@ if __name__ == "__main__" :
             )
 
 
-    st.title('In2Wise LwAI 시연')
+    st.title('MLops-mini')
 
     add_selectbox = st.sidebar.selectbox("Now Process", ("Predict", "Pred-Log", "Training(not-yet)", "Collect(not-yet)", "Test"))
 
