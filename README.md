@@ -1,20 +1,27 @@
-# TITLE : MLops_mini
-### From Now(As-Is)
-This repo is for showing Mlops structure in mini size to others who have interests in MLops.
-At firtst commit, I made simple toolkit to show the performances of several models.
-In this step, you could upload your model and test it by anomaly dataset and save the performance.
-Example images are below.
+# MLops Mini projects
 
-![alt tag](https://github.com/leadbreak/MLops_mini/blob/master/screen_01.png)
-![alt tag](https://github.com/leadbreak/MLops_mini/blob/master/screen_02.png)
-![alt tag](https://github.com/leadbreak/MLops_mini/blob/master/screen_03.png)
+## This repo is for the trial and understanding MLops by mini projects.
+### This repo consists with three stages below
 
-### To Future(To-Be)
-After first step, I would add training steps and optimizting steps more.
-In there, you could train your model as .tflite and manage your ML pipeline easily.
+### Stage 01 
+You can make your own MLops webapp with MNIST.
+Actually you didn't use MNIST dataset, you make it with Streamlit Canvas.
+You would write your own number(data) and do practice with them.
 
-Actually it isn't perfect MLops structure becuase there isn't any steps for cellecting data and serving.
-But by this, you could do training, taking A/B test between several models in many dataset(means several environment, not only lab env),
-and managing your total dataset and models without any code.
+### Stage 02
+You could try anomaly detection and apply MLops.
+In this stage, data collection and validation steps are except.
+I will give you some dataset related with vibration data as a log data.
+You could change your models, hyperparameters, activation functions, and threshold.
+If you have more interesting and time, you could try your own skills by fixing my code.
 
-So I call this MLops_mini and it could be a body in any other MLops Projects.
+### Stage 03 
+In this stage, you could do image detection and recognition with Yolo.
+With this, I predict we could make our own face check service in our organization,
+find something and tracking their location(actually it could also make models performance higher).
+
+At this moment, I do my job on Stage 02.
+
+If you have any qeustions on this repo,
+please send me email to leadbreak013@gmail.com.
+thanks
