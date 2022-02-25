@@ -40,13 +40,13 @@ class st_lwai :
         self.threshold = th_value
 
         if PTM_OPTIONS == 'hpt_01' :
-            self.model_path = (os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\models", "model_hpt_01.tflite"))
+            self.model_path = (os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\stage02\models", "model_hpt_01.tflite"))
         elif PTM_OPTIONS == 'hpt_02' :
-            self.model_path = (os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\models", "model_hpt_02.tflite"))
+            self.model_path = (os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\stage02\models", "model_hpt_02.tflite"))
         elif PTM_OPTIONS == 'default' :
-            self.model_path = (os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\models", "default.tflite"))
+            self.model_path = (os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\stage02\models", "default.tflite"))
         elif PTM_OPTIONS == 'stupid_for_test':
-            self.model_path = (os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\models", "stupid_for_test.tflite"))
+            self.model_path = (os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\stage02\models", "stupid_for_test.tflite"))
         else :
             self.model_path = PTM_OPTIONS
         self.model_name = self.model_path.split("\\")[-1].replace(".tflite","")
@@ -55,8 +55,8 @@ class st_lwai :
 
         self.error_code = 3 # 0 : no problem, 1 : change threshold, 2 : should do retraining, 3 : default
 
-        self.pred_log_path = os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\pred_log", "pred_log.csv")
-        self.threshold_df_path = os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\pred_log", f'{str(datetime.today().strftime("%Y%m%d_%H%M"))}_{self.model_name}_errorcode{self.error_code}_threshold_{self.threshold}.csv')
+        self.pred_log_path = os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\stage02\pred_log", "pred_log.csv")
+        self.threshold_df_path = os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\stage02\pred_log", f'{str(datetime.today().strftime("%Y%m%d_%H%M"))}_{self.model_name}_errorcode{self.error_code}_threshold_{self.threshold}.csv')
 
 
 
@@ -446,7 +446,7 @@ if __name__ == "__main__" :
     add_selectbox = st.sidebar.selectbox("Now Process", ("Predict", "Pred-Log", "Training(not-yet)", "Collect(not-yet)", "Test"))
 
     if add_selectbox == "Pred-Log" :
-        pred_log = pd.read_csv(os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\pred_log", "pred_log.csv"))
+        pred_log = pd.read_csv(os.path.join(os.path.expanduser('~'), "Documents\in2wise\st_lwaid\stage02\pred_log", "pred_log.csv"))
         st.dataframe(pred_log)
     elif add_selectbox == "Predict" :
             
