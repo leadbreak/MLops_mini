@@ -441,7 +441,7 @@ if __name__ == "__main__" :
             )
 
 
-    st.title('MLops-mini')
+    st.title('MLops-Mini')
 
     add_selectbox = st.sidebar.selectbox("Now Process", ("Predict", "Pred-Log", "Training(not-yet)", "Collect(not-yet)", "Test"))
 
